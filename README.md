@@ -1,26 +1,30 @@
-# static-pubkey
+# static-address
 
-![docs.rs](https://img.shields.io/docsrs/static-pubkey)
+[![Crates.io](https://img.shields.io/crates/v/static-address)](https://crates.io/crates/static-address)
+[![License](https://img.shields.io/crates/l/static-address)](https://github.com/movingco/static-address/blob/master/LICENSE.txt)
+[![Build Status](https://img.shields.io/github/workflow/status/movingco/static-address/Rust/master)](https://github.com/movingco/static-address/actions/workflows/rust.yml?query=branch%3Amaster)
+[![Contributors](https://img.shields.io/github/contributors/movingco/static-address)](https://github.com/movingco/static-address/graphs/contributors)
+[![Code Coverage](https://img.shields.io/codecov/c/github/movingco/static-address)](https://app.codecov.io/gh/movingco/static-address)
 
+The `static-address` crate provides a macro `static_address!`, used for compile-time parsing of strings into a static address. This provides an efficient way of declaring Move account addresses in source code while incurring almost no runtime cost in programs, without having to declare the byte array yourself. The actual code is adapted from [here](https://github.com/project-serum/anchor/commit/96036e149173603926074c6dba445c47bd6575aa).
 
-The `static-pubkey` crate provides a macro `static_pubkey!`, used for compile-time parsing of strings into a static public key. This prvodies an efficient way of declaring public keys in source code while incurring almost no runtime cost in solana programs, without having to declare the byte array yourself.  The actual code is taken from [here](https://github.com/project-serum/anchor/commit/96036e149173603926074c6dba445c47bd6575aa).
+## Usage
 
+First install the [`mv-core-types`](https://crates.io/crates/mv-core-types) crate.
 
-# usage
+Then, use the following code:
 
 ```rust
-#[cfg(test)]
-mod test {
-    use static_pubkey::static_pubkey;
-    #[test]
-    fn example() {
-        let key = static_pubkey!("GjphYQcbP1m3FuDyCTUJf2mUMxKPE3j6feWU1rxvC7Ps");
-        assert!(key.to_string() == "GjphYQcbP1m3FuDyCTUJf2mUMxKPE3j6feWU1rxvC7Ps");
-    }
-}
+let key: AccountAddress =
+    static_address!("0x80809acd8d3bc3d30aea82e5506f45951e3eb53e2fda39da6d772647e52c25cd");
+assert_eq!(
+    key.to_hex_literal(),
+    "0x80809acd8d3bc3d30aea82e5506f45951e3eb53e2fda39da6d772647e52c25cd"
+);
 ```
 
-# links
+An example of using this for an Aptos project is available at [crates/static-address-example-aptos](./crates/static-address-example-aptos/).
 
-* [crates.io](https://crates.io/crates/static-pubkey)
-* [docs.rs](https://docs.rs/crate/static-pubkey)
+## License
+
+`static-address` is licensed under the Apache License, version 2.0.

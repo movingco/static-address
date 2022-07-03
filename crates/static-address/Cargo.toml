@@ -1,0 +1,25 @@
+[package]
+name = "static-address"
+version = "0.1.0"
+description = "A macro used for compile-time parsing of Move account addresses into byte arrays for near 0-cost static addresses."
+homepage = "https://moving.wtf"
+repository = "https://github.com/movingco/static-address"
+authors = ["Ian Macalinao <ian@moving.wtf>"]
+license = "Apache-2.0"
+edition = "2021"
+readme = "../README.md"
+keywords = ["move", "aptos", "sui", "macro"]
+
+[lib]
+proc-macro = true
+
+[features]
+address20 = ["static-address-parser/address20"]
+address32 = ["static-address-parser/address32"]
+
+[dependencies]
+static-address-parser = { version = "0.1.0", path = "../static-address-parser" }
+syn = { version = "1", features = ["full"] }
+
+[dev-dependencies]
+mv-core-types = "0.1.0"

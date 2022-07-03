@@ -1,0 +1,16 @@
+[package]
+name = "static-address-example-aptos"
+version = "0.1.0"
+description = "Example of using the static-address crate with Aptos code."
+homepage = "https://moving.wtf"
+repository = "https://github.com/movingco/static-address"
+authors = ["Ian Macalinao <ian@moving.wtf>"]
+license = "Apache-2.0"
+edition = "2021"
+keywords = ["move", "aptos", "sui", "macro"]
+
+[dependencies]
+static-address = { version = "0.1.0", path = "../static-address", features = [
+    "address32"
+] }
+mv-core-types = { version = "0.1.0", features = ["address32"] }
