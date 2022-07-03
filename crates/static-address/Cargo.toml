@@ -1,6 +1,6 @@
 [package]
 name = "static-address"
-version = "0.1.0"
+version = "0.1.1"
 description = "A macro used for compile-time parsing of Move account addresses into byte arrays for near 0-cost static addresses."
 homepage = "https://moving.wtf"
 repository = "https://github.com/movingco/static-address"
