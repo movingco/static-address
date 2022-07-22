@@ -9,12 +9,8 @@ The `static-address` crate provides a macro `static_address!`, used for compile-
 
 ## Usage
 
-First install the [`mv-core-types`](https://crates.io/crates/mv-core-types) crate.
-
-Then, use the following code:
-
 ```rust
-let key: AccountAddress =
+let key =
     static_address!("0x80809acd8d3bc3d30aea82e5506f45951e3eb53e2fda39da6d772647e52c25cd");
 assert_eq!(
     key.to_hex_literal(),

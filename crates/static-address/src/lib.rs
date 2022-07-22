@@ -2,7 +2,7 @@
 
 #![deny(rustdoc::all)]
 
-use syn::{parse_macro_input, LitStr};
+pub use account_address;
 
 /// Parses a string literal account address into a byte array account address.
 ///
@@ -17,7 +17,4 @@ use syn::{parse_macro_input, LitStr};
 /// let key = static_address!("0x1");
 /// assert_eq!(key.to_hex_literal(), "0x1");
 /// ```
-#[proc_macro]
-pub fn static_address(input: proc_macro::TokenStream) -> proc_macro::TokenStream {
-    static_address_parser::parse_static_address(parse_macro_input!(input as LitStr)).into()
-}
+pub use static_address_macro::static_address;

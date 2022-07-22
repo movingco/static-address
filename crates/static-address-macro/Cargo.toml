@@ -1,5 +1,5 @@
 [package]
-name = "static-address"
+name = "static-address-macro"
 version = "0.2.0"
 description = "A macro used for compile-time parsing of Move account addresses into byte arrays for near 0-cost static addresses."
 homepage = "https://moving.wtf"
@@ -10,11 +10,14 @@ edition = "2021"
 readme = "../../README.md"
 keywords = ["move", "aptos", "sui", "macro"]
 
+[lib]
+proc-macro = true
+
 [features]
 default = []
-address20 = ["account-address/address20", "static-address-macro/address20"]
-address32 = ["account-address/address32", "static-address-macro/address32"]
+address20 = ["static-address-parser/address20"]
+address32 = ["static-address-parser/address32"]
 
 [dependencies]
-account-address = "0.2.0"
-static-address-macro = { version = "0.2.0", path = "../static-address-macro" }
+static-address-parser = { version = "0.2.0", path = "../static-address-parser" }
+syn = { version = "1", features = ["full"] }
