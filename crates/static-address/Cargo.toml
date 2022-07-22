@@ -21,6 +21,3 @@ address32 = ["static-address-parser/address32"]
 [dependencies]
 static-address-parser = { version = "0.1.0", path = "../static-address-parser" }
 syn = { version = "1", features = ["full"] }
-
-[dev-dependencies]
-mv-core-types = "0.1.0"

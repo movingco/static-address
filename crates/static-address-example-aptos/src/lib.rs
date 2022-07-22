@@ -4,13 +4,11 @@
 #![deny(rustdoc::all)]
 #![allow(rustdoc::missing_doc_code_examples)]
 
-use move_core_types::account_address::AccountAddress;
 use static_address::static_address;
 
 #[test]
 fn test_aptos_address() {
-    let key: AccountAddress =
-        static_address!("0x80809acd8d3bc3d30aea82e5506f45951e3eb53e2fda39da6d772647e52c25cd");
+    let key = static_address!("0x80809acd8d3bc3d30aea82e5506f45951e3eb53e2fda39da6d772647e52c25cd");
     assert_eq!(
         key.to_hex_literal(),
         "0x80809acd8d3bc3d30aea82e5506f45951e3eb53e2fda39da6d772647e52c25cd"
@@ -19,6 +17,6 @@ fn test_aptos_address() {
 
 #[test]
 fn test_aptos_address_short() {
-    let key: AccountAddress = static_address!("0x1");
+    let key = static_address!("0x1");
     assert_eq!(key.to_hex_literal(), "0x1");
 }

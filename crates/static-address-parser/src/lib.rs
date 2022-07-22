@@ -3,7 +3,7 @@
 #![deny(rustdoc::all)]
 #![allow(rustdoc::missing_doc_code_examples)]
 
-use move_core_types::account_address::AccountAddress;
+use account_address::AccountAddress;
 use proc_macro2::Span;
 use quote::quote;
 use syn::{LitByte, LitStr};
@@ -12,7 +12,7 @@ use syn::{LitByte, LitStr};
 pub fn parse_static_address(id_literal: LitStr) -> proc_macro2::TokenStream {
     let bytes = parse_static_address_as_array(id_literal);
     quote! {
-        ::move_core_types::account_address::AccountAddress::new(#bytes)
+        ::account_address::AccountAddress::new(#bytes)
     }
 }
 

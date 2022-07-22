@@ -11,11 +11,11 @@ keywords = ["move", "aptos", "sui", "macro"]
 
 [features]
 default = []
-address20 = ["mv-core-types/address20"]
-address32 = ["mv-core-types/address32"]
+address20 = ["account-address/address20"]
+address32 = ["account-address/address32"]
 
 [dependencies]
-mv-core-types = "0.1.5"
+account-address = "0.2.0"
 proc-macro2 = "1"
 quote = "1"
 syn = "1"

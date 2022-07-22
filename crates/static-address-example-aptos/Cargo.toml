@@ -13,4 +13,4 @@ keywords = ["move", "aptos", "sui", "macro"]
 static-address = { version = "0.1.0", path = "../static-address", features = [
     "address32"
 ] }
-mv-core-types = { version = "0.1.0", features = ["address32"] }
+account-address = { version = "0.2.0", features = ["address32"] }
