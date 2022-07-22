@@ -1,6 +1,6 @@
 [package]
 name = "static-address-parser"
-version = "0.1.2"
+version = "0.2.0"
 description = "Parser used by the static-address macro crate."
 homepage = "https://moving.wtf"
 repository = "https://github.com/movingco/static-address"
