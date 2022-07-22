@@ -1,6 +1,6 @@
 [package]
 name = "static-address-example-aptos"
-version = "0.2.0"
+version = "0.2.1"
 description = "Example of using the static-address crate with Aptos code."
 homepage = "https://moving.wtf"
 repository = "https://github.com/movingco/static-address"
