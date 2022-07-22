@@ -15,7 +15,7 @@ address20 = ["mv-core-types/address20"]
 address32 = ["mv-core-types/address32"]
 
 [dependencies]
-mv-core-types = "0.1.5"
+mv-core-types = "0.2.1"
 proc-macro2 = "1"
 quote = "1"
 syn = "1"
