@@ -16,5 +16,5 @@ address20 = ["account-address/address20", "static-address-macro/address20"]
 address32 = ["account-address/address32", "static-address-macro/address32"]
 
 [dependencies]
-account-address = "0.2.0"
+account-address = "0.2.3"
 static-address-macro = { version = "0.2.0", path = "../static-address-macro" }
