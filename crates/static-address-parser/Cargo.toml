@@ -15,7 +15,7 @@ address20 = ["account-address/address20"]
 address32 = ["account-address/address32"]
 
 [dependencies]
-account-address = "0.2.0"
+account-address = "0.2.3"
 proc-macro2 = "1"
 quote = "1"
 syn = "1"

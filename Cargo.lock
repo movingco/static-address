@@ -4,9 +4,9 @@ version = 3
 
 [[package]]
 name = "account-address"
-version = "0.2.2"
+version = "0.2.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ba5a54059886e9f0e345817ddabb0759a6f9e23e116026b62c91582e73ad617f"
+checksum = "94351e621ea7b066fb11f69226ea02bdc0b0aa0f6690bbe049304298d35d54db"
 dependencies = [
  "anyhow",
  "mv-core-types",
